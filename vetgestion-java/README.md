@@ -1,8 +1,7 @@
 # VetGestión — Prototipo
 
 Prototipo funcional en Java con persistencia en MySQL del sistema de gestión de turnos,
-historia clínica y stock para la Clínica Veterinaria PetLife, desarrollado como parte del
-Trabajo Práctico de Análisis y Diseño de Software (Etapas 1 y 2, PUD).
+historia clínica y stock para la Clínica Veterinaria PetLife.
 
 ## Requisitos
 
@@ -66,7 +65,7 @@ vetgestion-java/
     └── resources/config.properties
 ```
 
-## Correspondencia con el informe (Etapa 2)
+## Correspondencia con el informe (Trabajo Practico Nº 2)
 
 | Documento | Código |
 |---|---|
