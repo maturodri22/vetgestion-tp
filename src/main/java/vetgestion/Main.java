@@ -5,6 +5,10 @@ import vetgestion.control.GestorStock;
 import vetgestion.control.GestorTurnos;
 import vetgestion.dao.*;
 import vetgestion.excepcion.StockExcepcion;
+import vetgestion.mvc.controlador.ControladorStock;
+import vetgestion.mvc.modelo.ArchivoStock;
+import vetgestion.mvc.modelo.ModeloStock;
+import vetgestion.mvc.vista.VistaConsola;
 import vetgestion.model.*;
 
 import java.sql.SQLException;
@@ -61,6 +65,8 @@ public class Main {
                     case 17 -> listarInsumosOrdenados();
                     case 18 -> buscarInsumoPorNombre();
                     case 19 -> listarDescripciones();
+                    case 20 -> new ControladorStock(new ModeloStock(), new ArchivoStock(),
+                            new VistaConsola(sc)).iniciar();
                     case 0 -> System.out.println("Saliendo...");
                     default -> System.out.println("Opcion invalida.");
                 }
@@ -93,6 +99,7 @@ public class Main {
         System.out.println("17. Listar insumos ordenados por nombre");
         System.out.println("18. Buscar insumo por nombre (busqueda binaria)");
         System.out.println("19. Listar insumos y mascotas (interfaz Describible)");
+        System.out.println("20. Modulo Stock de insumos (patron MVC, archivos CSV)");
         System.out.println("0. Salir");
     }
 
