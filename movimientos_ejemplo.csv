@@ -1,0 +1,6 @@
+# insumo_id;cantidad;motivo (cantidad positiva = ingreso, negativa = egreso)
+4;10;Compra a proveedor
+2;-3;Aplicacion en consultas
+3;-50;Error de carga (dejaria stock negativo)
+abc;5;Id escrito como texto
+99;4;Insumo inexistente

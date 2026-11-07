@@ -92,3 +92,19 @@ vetgestion-java/
 | Cola (`Queue` / `LinkedList`) | `GestorSalaEspera`: la sala de espera se atiende por orden de llegada (opciones 14 a 16) |
 | Pila (`Deque` / `ArrayDeque`) | `GestorStock`: deshacer el último movimiento de stock (opción 13) |
 | Ordenación y búsqueda | `Algoritmos`: inserción y búsqueda binaria, usadas en las opciones 17 y 18 |
+
+## Etapa 4 – Patron MVC, archivos y persistencia
+
+Opcion **20** del menu: modulo de Stock de insumos implementado con el patron **MVC**.
+
+| Capa | Paquete | Responsabilidad |
+|------|---------|-----------------|
+| Modelo | `vetgestion.mvc.modelo` | JDBC (SELECT/UPDATE/DELETE), `ArrayList<ItemStock>`, arreglo `int[]` de niveles de stock, archivos CSV (`java.io`) |
+| Vista | `vetgestion.mvc.vista` | Interfaz `VistaStock` + implementacion `VistaConsola` |
+| Controlador | `vetgestion.mvc.controlador` | `ControladorStock`: une vista y modelo, captura `PersistenciaException` e `IOException` |
+
+Excepcion propia: `vetgestion.excepcion.PersistenciaException` (envuelve `SQLException`).
+
+Archivos: la exportacion crea `datos/reposicion_insumos.csv`; la importacion lee un CSV de movimientos
+(ejemplo: `datos/movimientos_ejemplo.csv`, formato `insumo_id;cantidad;motivo`, cantidad negativa = egreso)
+y registra las filas rechazadas en `datos/importacion_errores.log`.

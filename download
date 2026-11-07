@@ -1,0 +1,17 @@
+# Archivos generados al compilar
+target/
+out/
+*.class
+
+# Configuracion de IDEs
+.idea/
+.vscode/
+*.iml
+.classpath
+.project
+.settings/
+
+# Archivos generados por el modulo de stock
+datos/reposicion_insumos.csv
+datos/importacion_errores.log
+dependency-reduced-pom.xml
